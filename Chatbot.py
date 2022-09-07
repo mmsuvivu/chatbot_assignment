@@ -18,8 +18,7 @@ while 1 == 1:
                 print("no")
         if("are you alive" in answer):
                 print("yes i am alive")
-        if("turn off" in answer):
-            print("Turning off")
+        
 
     elif(state == "happy"):
         answer = input("Say something, my friend:")
