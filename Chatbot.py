@@ -1,14 +1,18 @@
 
 from random import randrange
 import random
+
 #current state
+
 state = "neutral"
 #array of possible arrays
 stateArray = ["neutral", "happy", "angry", "sad"]
 
 # These are greetings the chatbot can use when it's in a neutral state
 neutralGreetings = ["Hello. ", "Hi. ", "Nice to meet you. ", "Hey. "]
+
 neutralQuestions = ["How are you?", "How are you feeling?", "How is your day?"]
+
 
 # These are feelings the user can have if they are in a good mood
 goodUserAnswers = ["Good", "Well", "Fine", "Not bad", "Ok"]
@@ -64,24 +68,15 @@ while 1 == 1:
                         state = "sad"
                         print("That's really sad! I think I am sad now too.")
                     
-
                 # if the user answers in an angry way, the chatbot becomes angry
             for user_answer in angryUserAnswers:
                 if user_answer.lower() in answer.lower():
                     print("There's no need to be rude.")
                     state = "angry"
-        
-        # TODO: replace these with better ones:
-        elif("are you alive" in answer):
-                print("yes i am alive")
 
-        else:
-                print("Sorry I don't understand")
-
-        
-#--------------------------------------------------------------------
 
     elif(state == "happy"):
+
         answer = input("I am happy now! ")
         while state == "happy":
                 state = random.choice(stateArray)
@@ -98,7 +93,6 @@ while 1 == 1:
                     state = "angry"
                     
 
-        
 
     elif(state == "angry"):
         print(random.choice(angryBotGreetingArray))
@@ -124,6 +118,7 @@ while 1 == 1:
                                         state = "sad"
                                         
         
+
 
     elif(state == "sad"):
         answer = input(random.choice(sadBotGreetingArray) + " ") 
